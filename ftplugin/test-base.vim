@@ -15,6 +15,9 @@ let b:undo_ftplugin = "setl com< cms< et< fo<"
 
 setlocal comments=:# commentstring=#\ %s expandtab
 setlocal formatoptions-=t formatoptions+=croql
+setlocal shiftwidth=2
+setlocal tabstop=2
+setlocal softtabstop=2
 
 let &cpo = s:cpo_save
 unlet s:cpo_save

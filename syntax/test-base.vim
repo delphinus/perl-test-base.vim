@@ -9,14 +9,14 @@ if exists("b:current_syntax")
     finish
 endif
 
-runtime! $VIMRUNTIME/syntax/perl.vim
+runtime! syntax/perl.vim
 unlet b:current_syntax
 
-runtime! $VIMRUNTIME/syntax/yaml.vim
+runtime! syntax/yaml.vim
 unlet b:current_syntax
 
 syntax include @Perl $VIMRUNTIME/syntax/perl.vim
-syntax region TestBasePerl start='\%^' end='^__\%(END\|DATA\)__$' contains=@Perl keepend fold
+syntax region TestBasePerl start='\%^' end='^__\%(END\|DATA\)__$' contains=@Perl keepend
 syntax include @YAML $VIMRUNTIME/syntax/yaml.vim
 syntax region TestBaseYAML start='__\%(END\|DATA\)__\n\zs' end='\%$' contains=@YAML keepend
 
